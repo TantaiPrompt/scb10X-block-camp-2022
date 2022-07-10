@@ -72,7 +72,12 @@ export const Transfer = ({ setModal, selectAccount, setIsLoding }) => {
           </div>
         </div>
 
-        <div class="flex justify-end items-center">
+        <div class="flex justify-between items-center">
+          <div className="text-sm font-medium text-gray-500">
+            💰1% fee,if you transfer to other account<br/>
+            💰No fee,if you transfer to your account<br/>
+
+          </div>
           <button
             class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
             type="button"

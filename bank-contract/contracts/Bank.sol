@@ -58,7 +58,6 @@ contract Bank is IBank, Ownable, ReentrancyGuard {
         uint256 _amount
     ) external override nonReentrant {
         _bankTransfer(_from, _to, _amount);
-        emit BankTransfer(_from, _to, _amount);
     }
 
     function _bankTransfer(

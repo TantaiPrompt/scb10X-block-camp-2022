@@ -92,7 +92,7 @@ describe("Bank", function () {
     expect((await bank.connect(owner).getAccount("test01")).balance).to.equal(ethers.utils.parseEther("0"));
     expect((await bank.getAccount("test02")).balance).to.equal(ethers.utils.parseEther("10"));
   });
-  it("should be transfer with 1% fee if account not own ", async () => {
+  it("should be transfer with 1% fee if account not your", async () => {
     const [owner, addr1, addr2, ...addrs]: SignerWithAddress[] = allhardhatSigner;
     await bank.connect(addr2).newAccount("test03");
     await bank.connect(owner).deposit("test01", ethers.utils.parseEther("10"));
