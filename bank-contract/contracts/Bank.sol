@@ -39,7 +39,7 @@ contract Bank is IBank, Ownable, ReentrancyGuard {
         require(raiStone.allowance(msg.sender, address(this)) >= _amount, "You don't have enough allowance");
         accounts[_to].balance += _amount;
         raiStone.transferFrom(msg.sender, address(this), _amount);
-        emit Deposite(msg.sender, _to, _amount);
+        emit Deposit(msg.sender, _to, _amount);
     }
 
     function withdraw(string memory _from, uint256 _amount) external override nonReentrant {

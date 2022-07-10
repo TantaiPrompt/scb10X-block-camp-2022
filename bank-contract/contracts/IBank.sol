@@ -9,7 +9,7 @@ interface IBank {
         bool isExisted;
     }
     event NewAccount(string indexed name, address indexed _owner);
-    event Deposite(address indexed from, string indexed to, uint256 indexed amount);
+    event Deposit(address indexed from, string indexed to, uint256 indexed amount);
     event Withdraw(string indexed from, address indexed to, uint256 indexed amount);
     event BankTransfer(string indexed from, string indexed to, uint256 indexed amount);
 
